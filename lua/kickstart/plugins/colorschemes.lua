@@ -40,19 +40,6 @@ return {
 		end,
 	},
 	{
-		"oxfist/night-owl.nvim",
-		priority = 1000, -- Load before all other plugins
-		config = function()
-			require("night-owl").setup({
-				-- You can add customization options here if needed
-				-- e.g., italic_comments = false
-			})
-
-			-- Set the colorscheme
-			--vim.cmd.colorscheme("night-owl")
-		end,
-	},
-	{
 		"catppuccin/nvim",
 		priority = 1000,
 		name = "catppuccin",
