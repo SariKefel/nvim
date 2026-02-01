@@ -42,13 +42,6 @@ vim.lsp.config('eslint', {
 	root_markers = { '.eslintrc.js', '.eslintrc.json', 'eslint.config.js', 'package.json', '.git' },
 })
 
--- HTML
-vim.lsp.config('html', {
-	cmd = { 'vscode-html-language-server', '--stdio' },
-	filetypes = { 'html' },
-	root_markers = { '.git' },
-})
-
 -- CSS
 vim.lsp.config('cssls', {
 	cmd = { 'vscode-css-language-server', '--stdio' },
@@ -98,13 +91,6 @@ vim.lsp.config('bashls', {
 	root_markers = { '.git' },
 })
 
--- Markdown
-vim.lsp.config('marksman', {
-	cmd = { 'marksman', 'server' },
-	filetypes = { 'markdown', 'markdown.mdx' },
-	root_markers = { '.marksman.toml', '.git' },
-})
-
 -- Java
 vim.lsp.config('jdtls', {
 	cmd = { 'jdtls' },
@@ -112,11 +98,23 @@ vim.lsp.config('jdtls', {
 	root_markers = { '.git', 'mvnw', 'gradlew', 'pom.xml', 'build.gradle' },
 })
 
--- SQL
-vim.lsp.config('sqls', {
-	cmd = { 'sqls' },
-	filetypes = { 'sql', 'mysql' },
+-- Emmet (HTML/JSX/TSX expansion)
+vim.lsp.config('emmet_language_server', {
+	cmd = { 'emmet-language-server', '--stdio' },
+	filetypes = {
+		'html',
+		'css',
+		'scss',
+		'javascriptreact',
+		'typescriptreact',
+		'vue',
+		'svelte',
+	},
 	root_markers = { '.git' },
+	init_options = {
+		showExpandedAbbreviation = 'always',
+		showAbbreviationSuggestions = true,
+	},
 })
 
 return {}

@@ -28,7 +28,6 @@ return {
 				"typescript-language-server",
 				"tailwindcss-language-server",
 				"eslint-lsp",
-				"html-lsp",
 				"css-lsp",
 				"json-lsp",
 				"pyright",
@@ -36,9 +35,8 @@ return {
 				"gopls",
 				"clangd",
 				"bash-language-server",
-				"marksman",
 				"jdtls",
-				"sqls",
+				"emmet-language-server",
 				-- Formatters
 				"stylua",
 				"prettierd",

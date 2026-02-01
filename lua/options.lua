@@ -26,6 +26,12 @@ end)
 -- Enable break indent
 vim.opt.breakindent = true
 
+-- Use 4-space indentation
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.expandtab = true
+
 -- Save undo history
 vim.opt.undofile = true
 
@@ -66,20 +72,15 @@ vim.opt.scrolloff = 10
 -- See `:help 'confirm'`
 vim.opt.confirm = true
 
--- vim: ts=2 sts=2 sw=2 et
+-- vim: ts=4 sts=4 sw=4 et
 
 vim.cmd([[
   filetype plugin indent on
-
-  augroup c_indent
-    autocmd!
-    autocmd FileType c setlocal cindent shiftwidth=4 tabstop=4
-  augroup END
 ]])
 
 -- Change the built in netrw file system from directly opening the folder
 -- to having a tree format.
 
-vim.g.netrw_lifestyle = 3
+vim.g.netrw_liststyle = 3
 vim.g.netrw_banner = 0
 vim.g.netrw_browse_split = 0

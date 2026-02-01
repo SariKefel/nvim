@@ -6,7 +6,6 @@ local servers = {
 	'ts_ls',
 	'tailwindcss',
 	'eslint',
-	'html',
 	'cssls',
 	'jsonls',
 	'pyright',
@@ -14,9 +13,8 @@ local servers = {
 	'gopls',
 	'clangd',
 	'bashls',
-	'marksman',
 	'jdtls',
-	'sqls',
+	'emmet_language_server',
 }
 
 -- Enable each server
